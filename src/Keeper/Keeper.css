@@ -1,0 +1,63 @@
+.area-main{
+    margin: auto;
+    margin-top: 10px;
+    width: 30%;
+    border: 1px solid black;
+    border-radius: 9px;
+    padding: 5px;
+    background-color: white;
+}
+
+.title-ip{
+    outline: none;
+}
+
+body{
+    background-color: rgb(247, 243, 239);
+}
+
+.note{
+    width: 20%;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    margin: 30px 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+.note-area-btn{
+    position: absolute;
+    left: 380px;
+}
+*{
+    box-sizing: border-box;
+}
+
+.note-area{
+    position: absolute;
+    left: 220px;
+}
+
+.note-para{
+    height: auto;
+    width: auto;
+}
+
+.notes-container {
+    display: flex;
+    justify-content: space-between; 
+  }
+
+.footer-div{
+    text-align: center;
+    width: 100%;
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 20px;
+}
+
+.note-main{
+    width: 100%;
+    height: auto;
+}

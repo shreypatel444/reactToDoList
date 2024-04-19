@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {  useState } from "react";
+import Navbar from "./Keeper/Navbar"
+import Footer from "./Keeper/Footer"
+import Note from "./Keeper/Note"
+import NoteArea from "./Keeper/NoteArea"
 
-function App() {
+export default function App() {
+  const [addItem, setAddItem] = useState([]);
+
+  const Fnaddnote = (note) => {
+    setAddItem((prev) => {
+      return [...prev, note];
+    });
+  };
+
+  const onDelete = (id) => {
+    setAddItem((prevvalue) =>
+      prevvalue.filter((curr, ind) => {
+        return ind !== id;
+      })
+    );
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+      <NoteArea addnote={Fnaddnote} />
+
+      {addItem.map((val, index) => {
+        return (
+          <Note
+            key={index}
+            id={index}
+            title={val.title}
+            content={val.content}
+            deleteItem={onDelete}
+          />
+        );
+      })}
+
+      <Footer />
+    </>
   );
 }
-
-export default App;
