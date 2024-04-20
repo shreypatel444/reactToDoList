@@ -56,9 +56,11 @@ export default function NoteArea(props) {
             placeholder="Write content..."
           ></textarea>
         </div>
-        <Button variant="contained" className="note-area-btn" onClick={clicked}>
+        <div className="note-area-btn">
+        <Button variant="contained" onClick={clicked}>
         <AddCircleIcon />
       </Button>
+      </div>
       </div>
     </>
   );

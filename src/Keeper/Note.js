@@ -13,13 +13,14 @@ export default function Note(props) {
         <div className="note">
           <h4 className="note-title">{props.title}</h4>
           <p className="note-para">{props.content}</p>
+          <div className="note-area-btn">
           <Button
             variant="contained"
-            className="note-area"
             onClick={deleteNote}
           >
             <DeleteIcon />
           </Button>
+          </div>
         </div>
       </div>
     </div>

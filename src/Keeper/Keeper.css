@@ -26,26 +26,30 @@ body{
 }
 
 .note-area-btn{
-    position: absolute;
-    left: 380px;
+    display: flex;
+    justify-content: center;
 }
+
 *{
     box-sizing: border-box;
 }
 
-.note-area{
-    position: absolute;
-    left: 220px;
-}
+.note-title {
+    word-wrap: break-word;
+  }
 
 .note-para{
     height: auto;
+    word-wrap: break-word;
     width: auto;
+    overflow-y: auto;
+    max-height: 200px;
 }
 
 .notes-container {
     display: flex;
-    justify-content: space-between; 
+    flex-wrap: wrap;
+    max-width: 100%;
   }
 
 .footer-div{
@@ -60,4 +64,6 @@ body{
 .note-main{
     width: 100%;
     height: auto;
+    display: flex;
+    justify-content: center;
 }
