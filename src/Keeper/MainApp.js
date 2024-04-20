@@ -1,9 +1,8 @@
-import React, { useState } from "react";
-import Navbar from "./Keeper/Navbar";
-import Footer from "./Keeper/Footer";
-import Note from "./Keeper/Note";
-import NoteArea from "./Keeper/NoteArea";
-import "./App.css";
+import React, {  useState } from "react";
+import Navbar from "./Keeper/Navbar"
+import Footer from "./Keeper/Footer"
+import Note from "./Keeper/Note"
+import NoteArea from "./Keeper/NoteArea"
 
 export default function App() {
   const [addItem, setAddItem] = useState([]);
@@ -26,7 +25,7 @@ export default function App() {
     <>
       <Navbar />
       <NoteArea addnote={Fnaddnote} />
-      <div className="Note-Map">
+
       {addItem.map((val, index) => {
         return (
           <Note
@@ -38,7 +37,7 @@ export default function App() {
           />
         );
       })}
-      </div>
+
       <Footer />
     </>
   );

@@ -17,8 +17,7 @@ body{
 }
 
 .note{
-    width: 20%;
-    /* border: 2px solid black; */
+    width: auto;
     border-radius: 5px;
     margin: 30px 20px;
     background-color: white;

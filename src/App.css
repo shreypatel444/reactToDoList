@@ -1,0 +1,6 @@
+.Note-Map {
+    display: flex;
+  flex-direction: row; /* or any other value based on your design */
+  align-items: center; /* add this if you want items to wrap to the next line */
+  flex-wrap: wrap;
+  }
